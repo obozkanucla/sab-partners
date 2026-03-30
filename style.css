@@ -6,208 +6,102 @@
 
 :root {
   --navy: #1b2a4a;
-  --navy-light: #2a3d66;
-  --grey: #6b7b8d;
-  --light: #f7f8fa;
   --white: #ffffff;
 }
 
 body {
   font-family: 'Georgia', 'Times New Roman', serif;
-  color: var(--navy);
+  color: var(--white);
   line-height: 1.6;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* Header */
-header {
-  padding: 20px 0;
-  border-bottom: 1px solid #e8eaed;
-  position: sticky;
-  top: 0;
-  background: var(--white);
-  z-index: 10;
-}
-
-header .container {
+.landing {
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  height: 50px;
-  width: auto;
-}
-
-nav a {
-  color: var(--navy);
-  text-decoration: none;
-  margin-left: 32px;
-  font-size: 0.95rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-}
-
-nav a:hover {
-  color: var(--grey);
-}
-
-/* Hero */
-.hero {
-  padding: 120px 0 100px;
+  justify-content: center;
   text-align: center;
-  background: var(--light);
+  padding: 40px 24px;
+  gap: 36px;
+  background: linear-gradient(rgba(20, 30, 55, 0.87), rgba(20, 30, 55, 0.87)), url('assets/london-skyline.jpg') center/cover no-repeat;
 }
 
-.hero h1 {
-  font-size: 2.8rem;
+.glass-card {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.logo-card {
+  padding: 24px 32px;
+}
+
+.landing-logo {
+  height: 180px;
+  width: auto;
+  display: block;
+}
+
+.landing h1 {
+  font-size: 2.2rem;
   font-weight: 400;
   line-height: 1.3;
-  margin-bottom: 24px;
   letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.hero .subtitle {
+.content-card {
+  max-width: 580px;
+}
+
+.subtitle {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 1.1rem;
-  color: var(--grey);
-  max-width: 640px;
-  margin: 0 auto 40px;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.75);
   line-height: 1.7;
-}
-
-.cta {
-  display: inline-block;
-  padding: 14px 36px;
-  background: var(--navy);
-  color: var(--white);
-  text-decoration: none;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.9rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  transition: background 0.2s;
-}
-
-.cta:hover {
-  background: var(--navy-light);
-}
-
-/* About */
-.about {
-  padding: 80px 0;
-}
-
-.about h2 {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom: 48px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-
-.card {
-  padding: 32px;
-  border: 1px solid #e8eaed;
-}
-
-.card h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.card p {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: var(--grey);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* Contact */
-.contact {
-  padding: 80px 0;
-  background: var(--light);
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom: 16px;
-}
-
-.contact > .container > p {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: var(--grey);
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .contact-details {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .contact-details a {
-  color: var(--navy);
+  color: var(--white);
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-decoration: none;
-  border-bottom: 1px solid var(--navy);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .contact-details a:hover {
-  color: var(--grey);
-  border-color: var(--grey);
+  color: rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .location {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: var(--grey);
-  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
 }
 
-/* Footer */
-footer {
-  padding: 32px 0;
-  border-top: 1px solid #e8eaed;
-  text-align: center;
-}
-
-footer p {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: var(--grey);
-  font-size: 0.85rem;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
+  .landing h1 {
+    font-size: 1.5rem;
   }
 
-  .cards {
-    grid-template-columns: 1fr;
+  .landing-logo {
+    height: 140px;
   }
 
-  nav a {
-    margin-left: 20px;
+  .glass-card {
+    padding: 24px;
   }
 }
